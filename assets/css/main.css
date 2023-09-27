@@ -1,3 +1,7 @@
+body {
+  background-image: url("../../images/z1.jpeg");
+}
+
 .image-container {
     position: relative;
   }
@@ -22,4 +26,9 @@
 .link:visited {
     -webkit-text-stroke: 2px black;
     text-decoration: none;    
+}
+@media screen and (min-width: 400) {
+  body {
+    display: none;
+  }
 }
