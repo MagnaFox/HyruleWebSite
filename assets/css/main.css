@@ -3,38 +3,46 @@ body {
 }
 
 .image-container {
-    position: relative;
-  }
-  
-  .sword-image {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-  }
-  
-  .text-container {
-    position: absolute;
-    top: 30%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: 'Hylia serif';
-    font-size: 3em;
-    color: springgreen;
-    display: inline-block;
-    -webkit-text-stroke: 2px black;
-  }
+  position: relative; /* Ensure the container is positioned relatively */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.sword-image {
+  position: absolute; /* Position the image absolutely within the container */
+  top: -100px; /* Position the image closer to the text */
+  width: 150px; /* Set width to 200px */
+  height: auto; /* Maintain aspect ratio */
+  display: none; /* Initially hide the image */
+  transform: rotate(45deg); /* Rotate the image 45 degrees */
+}
+
+.text-container {
+  position: absolute;
+  top: 30%;
+  left: 5%; /* Adjusted to be 5% from the left */
+  transform: translateY(-50%); /* Center vertically */
+  text-align: left; /* Align text to the left */
+  font-family: 'Hylia serif';
+  font-size: 3em;
+  color: springgreen;
+  display: inline-block;
+  -webkit-text-stroke: 2px black;
+}
 
 .link {
-    color: aquamarine; 
-    text-decoration: none;    
+  color: aquamarine;
+  text-decoration: none;
 }
+
 .link:visited {
-    -webkit-text-stroke: 2px black;
-    text-decoration: none;    
+  -webkit-text-stroke: 2px black;
+  text-decoration: none;
 }
-@media screen and (min-width: 400) {
+
+@media screen and (max-width: 400px) {
   body {
-    display: none;
+      display: none;
   }
 }
